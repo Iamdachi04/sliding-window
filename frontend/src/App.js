@@ -1,7 +1,24 @@
 import logo from './logo.svg';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
+   const cardData = [
+    {
+      imageSrc: "/images.jpg",
+      title: "Dynamic Feature One",
+      description: "Explore the first groundbreaking feature. It's designed to make your experience seamless and intuitive.",
+      buttonText: "Learn More",
+      buttonVariant: "primary"
+    },
+     {
+      imageSrc: "/images.jpg",
+      title: "Dynamic Feature One",
+      description: "Explore the first groundbreaking feature. It's designed to make your experience seamless and intuitive.",
+      buttonText: "Learn More",
+      buttonVariant: "primary"
+    },
+  ];
   return (
     <div className="App">
       <header className="App-header">
