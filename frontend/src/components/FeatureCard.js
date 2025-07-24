@@ -4,7 +4,8 @@ function FeatureCard(props) {
   return (
     <Col>
       <Card className="h-100 shadow-sm">
-        <Card.Img variant="top" src={props.imageSrc} alt={props.title} />
+        <Card.Img variant="top" src={props.imageSrc} alt={props.title} 
+         style={{ height: '180px', objectFit: 'cover' }}/>
         <Card.Body>
           <Card.Title>{props.title}</Card.Title>
           <Card.Text>
