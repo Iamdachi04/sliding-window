@@ -12,13 +12,13 @@ function App() {
     },
     {
       imageSrc: "/mariahcarrey.png",
-      title: "Second Singer Title",
-      description: "Description for the second singer."
+      title: "meriah carey",
+      description: "she a beauty fs fs"
     },
     {
       imageSrc: "/bruno.png",
-      title: "Third Singer Title",
-      description: "Description for the third singer."
+      title: "bruno mars",
+      description: "love his grenade!!!! don't you told to play for yaaaaa , u know I'd catch a grenade for yaaaaa , hooooo , I would go through all this pain , take a bullet straight through my brain , yes I would die for yaaaaa , baby , but you won't do the same"
     }
   ];
 
