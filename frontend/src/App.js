@@ -6,17 +6,17 @@ import './App.css';
 function App() {
   const cardData = [
     {
-      imageSrc: "/images.jpg",
-      title: "First Singer Title",
-      description: "Description for the first singer."
+      imageSrc: "/freddiemercury.png",
+      title: "freddie mercury",
+      description: "one of the best to do it!!!!"
     },
     {
-      imageSrc: "/waterfall.jpg",
+      imageSrc: "/mariahcarrey.png",
       title: "Second Singer Title",
       description: "Description for the second singer."
     },
     {
-      imageSrc: "/images.jpg",
+      imageSrc: "/bruno.png",
       title: "Third Singer Title",
       description: "Description for the third singer."
     }
@@ -42,7 +42,6 @@ function App() {
                   title={data.title}
                   description={data.description}
                 />
-                
               </Carousel.Item>
             ))}
           </Carousel>
