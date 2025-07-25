@@ -1,5 +1,6 @@
 import { Container, Carousel } from 'react-bootstrap';
 import FeatureCard from './FeatureCard';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   const cardData = [
