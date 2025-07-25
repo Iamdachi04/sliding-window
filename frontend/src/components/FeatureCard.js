@@ -1,20 +1,17 @@
-import { Col, Card, Button } from 'react-bootstrap';
-//in props  we write source of image , title of image, description of image, button text and button variant
+import { Carousel } from 'react-bootstrap';
 function FeatureCard(props) {
   return (
-    <Col>
-      <Card className="h-100 shadow-sm">
-        <Card.Img variant="top" src={props.imageSrc} alt={props.title} 
-         style={{ height: '180px', objectFit: 'cover' }}/>
-        <Card.Body>
-          <Card.Title>{props.title}</Card.Title>
-          <Card.Text>
-            {props.description}
-          </Card.Text>
-          <Button variant={props.buttonVariant}>{props.buttonText}</Button>
-        </Card.Body>
-      </Card>
-    </Col>
+    <Carousel.Item style={{ minHeight: '300px' }}>
+      <img
+        className="d-block w-100" 
+        src={props.imageSrc}   
+        alt={props.title}       
+      />
+      <Carousel.Caption>
+        <h3>{props.title}</h3>
+        <p>{props.description}</p>
+      </Carousel.Caption>
+    </Carousel.Item>
   );
 }
 
