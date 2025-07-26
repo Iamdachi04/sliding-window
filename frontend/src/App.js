@@ -2,7 +2,7 @@ import { Container, Carousel } from 'react-bootstrap';
 import FeatureCard from './FeatureCard';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import {useState} from 'react';
+import {useState,useEffect} from 'react';
 
 function App() {
    const [scrollPercentage, setScrollPercentage] = useState(0); 
@@ -38,6 +38,14 @@ function App() {
       setScrollPercentage(0);
     }
   }
+
+  useEffect(()=>{
+    window.addEventListener('scroll',handleScroll);
+    return ()=>{
+      window.removeEventListener('scroll',handleScroll);
+    }
+
+  },[])
 
   return (
     <>
