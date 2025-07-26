@@ -2,8 +2,12 @@ import { Container, Carousel } from 'react-bootstrap';
 import FeatureCard from './FeatureCard';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+import {useState} from 'react';
 
 function App() {
+   const [scrollPercentage, setScrollPercentage] = useState(0); 
+    
+
   const cardData = [
     {
       imageSrc: "/freddiemercury.png",
@@ -25,7 +29,7 @@ function App() {
   return (
     <>
       <div className="progress-container">
-        <div className="progress-bar"></div>
+        <div className="progress-bar" style={{ width: `${scrollPercentage}%` }}></div>
       </div>
 
       <div className="App" style={{ backgroundColor: '#e0e0e0', minHeight: '100vh', padding: '20px 0' }}>
