@@ -26,6 +26,19 @@ function App() {
     }
   ];
 
+  const handleScroll= ()=>{
+    const scrolltop = window.pageYOffset;
+    const docheight = document.documentElement.scrollHeight;
+    const winheight = window.innerHeight;
+    if(docheight- winheight>0){
+      const scrolled = (scrolltop / (docheight - winheight)) * 100;
+      setScrollPercentage(scrolled);
+    }
+    else{
+      setScrollPercentage(0);
+    }
+  }
+
   return (
     <>
       <div className="progress-container">
