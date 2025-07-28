@@ -3,10 +3,11 @@ import FeatureCard from './FeatureCard';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import {useState,useEffect} from 'react';
+import Observer from './Observer';
 
 function App() {
    const [scrollPercentage, setScrollPercentage] = useState(0); 
-    
+      const [isHeaderVisible, setIsHeaderVisible] = useState(true);
 
   const cardData = [
     {
@@ -30,6 +31,14 @@ function App() {
     const scrolltop = window.pageYOffset;
     const docheight = document.documentElement.scrollHeight;
     const winheight = window.innerHeight;
+
+    if (scrolltop > 800) {
+      setIsHeaderVisible(false);
+    } else {
+      setIsHeaderVisible(true);
+    }
+
+
     if(docheight- winheight>0){
       const scrolled = (scrolltop / (docheight - winheight)) * 100;
       setScrollPercentage(scrolled);
@@ -53,6 +62,11 @@ function App() {
         <div className="progress-bar" style={{ width: `${scrollPercentage}%` }}></div>
       </div>
 
+      <header className={`app-header ${isHeaderVisible ? '' : 'header-hidden'}`}>
+        <h1>Welcome to My Singers Page</h1>
+        <p>Scroll down to discover more!</p>
+      </header>
+       <Observer>
       <div className="App" style={{ backgroundColor: '#e0e0e0', minHeight: '100vh', padding: '20px 0' }}>
         <Container className="my-5" style={{ backgroundColor: 'white', padding: '20px', borderRadius: '8px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)' }}>
           <h2 className="text-center mb-5">Carousel Using Reusable FeatureCard</h2>
@@ -72,12 +86,15 @@ function App() {
           </Carousel>
         </Container>
       </div>
+      </Observer>
+      <Observer>
       <div className="App" style={{ backgroundColor: '#e0e0e0', minHeight: '100vh', padding: '20px 0' }}>
         <Container className="my-5" style={{ backgroundColor: 'white', padding: '20px', borderRadius: '8px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)' }}>
           <h2 className="text-center mb-5">More Content to Make the Page Scroll</h2>
           <p>This is just filler content to ensure the page is long enough to have a scrollbar.</p>
         </Container>
       </div>
+      </Observer>
     </>
   );
 }
